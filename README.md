@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Volleyball Group Activity Recognition (CVPR 2016)
 
 A professional PyTorch implementation of the hierarchical temporal model for group activity recognition in volleyball videos, based on the CVPR 2016 paper.
@@ -102,3 +103,6 @@ This implementation follows a two-stage hierarchical approach with several enhan
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+=======
+# group-activity-recognition_v2
+>>>>>>> 0facfca299a7f34f49264fbc1b7754eae2a84432
