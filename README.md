@@ -104,7 +104,7 @@ This implementation follows a two-stage hierarchical approach with several enhan
 4.  **Training Strategy**: Two-stage training with Stage 1 focusing on action recognition and Stage 2 on group activity.
 
 ## 🙏 Acknowledgements
-Special thanks to **dr.Mostafa S. Ibrahim** for his guidance and the original [CVPR 2016 paper](https://vcl.pku.edu.cn/people/mostafa/cvpr16_volleyball.pdf).
+Special thanks to **Dr.Mostafa S. Ibrahim** for his guidance and the original [CVPR 2016 paper](assests/ibrahim-cvpr16.pdf).
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
