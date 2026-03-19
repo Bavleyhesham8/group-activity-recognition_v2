@@ -153,6 +153,5 @@ echo "Next: cd build && cmake .. && make"
     std::cout << "\nProject structure creation finished!\n";
     std::cout << "You can now cd " << root << " && mkdir build && cd build && cmake .. && make\n";
  
-segtree
     return 0;
 }

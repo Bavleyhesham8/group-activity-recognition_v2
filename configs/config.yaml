@@ -1,7 +1,7 @@
 # Configuration for Group Activity Recognition
 data:
-  main_anno_root: "/kaggle/input/datasets/ahmedmohamed365/volleyball/volleyball_/videos"
-  tracking_root: "/kaggle/input/datasets/ahmedmohamed365/volleyball/volleyball_tracking_annotation/volleyball_tracking_annotation"
+  main_anno_root: "./data/raw/volleyball/videos"
+  tracking_root: "./data/raw/volleyball/tracking_annotations"
   output_base: "./processed"
   checkpoints_dir: "./outputs/checkpoints"
 
