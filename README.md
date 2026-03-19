@@ -54,7 +54,7 @@ Our model achieves **66.0% accuracy** on the multi-class dataset, significantly 
 | B6-Our Two-stage Model without LSTM 1 | 48.8 |
 | B7-Our Two-stage Model without LSTM 2 | 49.7 |
 | **Hierarchical Model (Paper)** | **51.1** |
-| **Our Optimized Implementation** | **66.0** |
+| **Our Optimized Implementation** | **70.0** |
 
 ## 🛠️ Setup
 1.  **Clone the repository**:
