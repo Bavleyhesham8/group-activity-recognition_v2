@@ -1,0 +1,27 @@
+# Configuration for Group Activity Recognition
+data:
+  main_anno_root: "/kaggle/input/datasets/ahmedmohamed365/volleyball/volleyball_/videos"
+  tracking_root: "/kaggle/input/datasets/ahmedmohamed365/volleyball/volleyball_tracking_annotation/volleyball_tracking_annotation"
+  output_base: "./processed"
+  checkpoints_dir: "./outputs/checkpoints"
+
+training:
+  stage1:
+    epochs: 40
+    lr: 0.0001
+    batch_size: 16
+  stage2:
+    epochs: 30
+    lr: 0.00001
+    batch_size: 16
+  num_workers: 4
+
+model:
+  person_embed_dim: 128
+  person_hidden_dim: 256
+  group_hidden_dim: 512
+  num_players: 12
+  num_frames: 9
+  resnet_feature_dim: 2048
+  num_group_classes: 8
+  num_person_classes: 10

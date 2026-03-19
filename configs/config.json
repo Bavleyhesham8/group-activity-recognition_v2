@@ -1,0 +1,9 @@
+{
+  "timesteps": 9,
+  "batch_size": 4,
+  "learning_rate": 0.00001,
+  "momentum": 0.9,
+  "hidden_size_person": 3000,
+  "hidden_size_group": 500,
+  "dataset_root": "data/raw/volleyball"
+}
