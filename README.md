@@ -1,7 +1,9 @@
->>>>>>> FETCH_HEAD
 # Volleyball Group Activity Recognition (CVPR 2016)
 
 A professional PyTorch implementation of the hierarchical temporal model for group activity recognition in volleyball videos, based on the CVPR 2016 paper.
+
+**Author:** bavley hesham ibrahim  
+**Instructor:** dr.Mostafa S. Ibrahim
 
 ## 🖼️ Demos
 ![Demo 1](assests/demo_105655_frame_105655_pred_2_true_2.jpg)
@@ -21,7 +23,7 @@ group-activity-recognition/
 ├── src/
 │   ├── data_prep/
 │   │   ├── extract_features.py                       # Layer-wise feature extraction
-│   │   └── build_sequences.py                       # Sequence aggregation (memmap)
+│   │   └── build_dataset.py                        # Dataset aggregation (memmap)
 │   ├── models/
 │   │   └── hierarchical_model.py                    # PersonLSTM + GroupLSTM architecture
 │   ├── train.py                                     # Stage 1 and Stage 2 training loops
@@ -59,8 +61,8 @@ Our model achieves **70.0% accuracy** on the multi-class dataset, significantly 
 ## 🛠️ Setup
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/volleyball-group-activity-recognition.git
-    cd volleyball-group-activity-recognition
+    git clone https://github.com/Bavleyhesham8/group-activity-recognition_v2.git
+    cd group-activity-recognition_v2
     ```
 2.  **Install dependencies**:
     ```bash
@@ -71,15 +73,15 @@ Our model achieves **70.0% accuracy** on the multi-class dataset, significantly 
 
 ## 📈 Usage
 ### 1. Feature Extraction
-Extract ResNet50 features from player crops:
+Extract ResNet18 features from player crops:
 ```bash
 python src/data_prep/extract_features.py
 ```
 
-### 2. Sequence Building
-Process extracted features into memmapped sequences for efficient training:
+### 2. Dataset Building
+Process extracted features into memmapped datasets for efficient training:
 ```bash
-python src/data_prep/build_sequences.py
+python src/data_prep/build_dataset.py
 ```
 
 ### 3. Training
@@ -91,18 +93,18 @@ python src/train.py
 ### 4. Evaluation
 Evaluate the model on the test set:
 ```bash
-python src/evaluate.py --model outputs/checkpoints/model_final.pth
+python src/evaluate.py --ckpt outputs/checkpoints/best_full_model.pt
 ```
 
 ## 📜 Methodology
 This implementation follows a two-stage hierarchical approach with several enhancements:
-1.  **Feature Extraction**: Uses a pre-trained ResNet50 for high-quality player feature representaiton.
-2.  **Person Level**: Individual player temporal dynamics are captured using a `PersonLSTM` with temporal attention.
+1.  **Feature Extraction**: Uses a pre-trained ResNet18 for high-quality player feature representation.
+2.  **Person Level**: Individual player temporal dynamics are captured using a `PersonLSTM`.
 3.  **Group Level**: A `TwoTeamGroupLSTM` aggregates players from both sides of the net to classify the overall group activity.
-4.  **Training Tricks**: Weighted cross-entropy for imbalanced player actions and team-based max-pooling for improved group representation.
+4.  **Training Strategy**: Two-stage training with Stage 1 focusing on action recognition and Stage 2 on group activity.
+
+## 🙏 Acknowledgements
+Special thanks to **dr.Mostafa S. Ibrahim** for his guidance and the original [CVPR 2016 paper](https://vcl.pku.edu.cn/people/mostafa/cvpr16_volleyball.pdf).
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-=======
-# group-activity-recognition_v2
->>>>>>> 0facfca299a7f34f49264fbc1b7754eae2a84432

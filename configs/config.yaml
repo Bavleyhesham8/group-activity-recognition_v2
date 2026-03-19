@@ -7,21 +7,26 @@ data:
 
 training:
   stage1:
-    epochs: 40
-    lr: 0.0001
-    batch_size: 16
-  stage2:
     epochs: 30
-    lr: 0.00001
-    batch_size: 16
+    lr: 0.0001
+    batch_size: 32
+  stage2:
+    epochs: 50
+    lr: 0.0001
+    batch_size: 32
   num_workers: 4
+  standing_keep: 0.15
+  standing_thresh: 0.5
 
 model:
-  person_embed_dim: 128
-  person_hidden_dim: 256
-  group_hidden_dim: 512
+  feat_dim: 512
+  person_hidden: 512
+  proj_dim: 256
+  fc_dim: 512
+  group_hidden: 256
   num_players: 12
   num_frames: 9
-  resnet_feature_dim: 2048
+  num_subframes: 20
   num_group_classes: 8
-  num_person_classes: 10
+  num_action_classes: 10
+  use_temporal_attn: true
