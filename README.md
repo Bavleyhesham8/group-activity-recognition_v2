@@ -35,7 +35,7 @@ group-activity-recognition/
 ```
 
 ## 📊 Performance
-Our model achieves **66.0% accuracy** on the multi-class dataset, significantly outperforming the baseline hierarchical model (51.1%).
+Our model achieves **70.0% accuracy** on the multi-class dataset, significantly outperforming the baseline hierarchical model (51.1%).
 
 ### Classification Report
 ![Classification Report](assests/111.png)
